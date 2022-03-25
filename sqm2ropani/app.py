@@ -60,7 +60,7 @@ def process(in_column,reader):
 
 if __name__ == '__main__':
     # Give the location of the file
-    path = input("Input Path of File : \n")
+    path = input("Input Path of File (with trailing \): \n")
     filename= input("Name of file : \n")
     outfilename= input("Output name of file : \n")
 
@@ -69,8 +69,8 @@ if __name__ == '__main__':
     # filename='purja'
     if os.path.isfile(loc) is False :
         raise ValueError("File doesnot exist at "+loc)
-    
-    out=r'sqm2rop_outputs\re_'+outfilename+'.csv'
+    ouputfilelocation=input("Output file location (with trailing \): \n")
+    out=r''+ouputfilelocation+'re_'+outfilename+'.csv'
     # if os.path.isfile(loc) :
     #     os.remove(out)
     # out=r'sqm2rop_outputs\test.csv'
