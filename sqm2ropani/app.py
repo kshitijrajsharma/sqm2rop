@@ -62,14 +62,17 @@ if __name__ == '__main__':
     # Give the location of the file
     path = input("Input Path of File : \n")
     filename= input("Name of file : \n")
+    outfilename= input("Output name of file : \n")
+
     loc = r''+path+filename+'.csv'
     # loc =r'C:\Users\Kshitiz\OneDrive\Desktop\purja.csv'
     # filename='purja'
     if os.path.isfile(loc) is False :
         raise ValueError("File doesnot exist at "+loc)
-    out=r'sqm2rop_outputs\re_'+filename+'.csv'
-    if os.path.isfile(loc) :
-        os.remove(out)
+    
+    out=r'sqm2rop_outputs\re_'+outfilename+'.csv'
+    # if os.path.isfile(loc) :
+    #     os.remove(out)
     # out=r'sqm2rop_outputs\test.csv'
 
     with open(loc,'r', encoding="utf8") as fin,     open(out,'w',  encoding="utf-8") as fout:
