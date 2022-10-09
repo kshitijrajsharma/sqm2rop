@@ -115,14 +115,27 @@ if __name__ == '__main__':
             process(in_column_index,reader)
             print("Success ! File created at : "+out)
     elif choice == 2:
-        converter()
+    	user= True
+    	while user== True :
+        	converter()
+        	cont= input("Enter Again ? (Y/N)")
+        	if cont =="Y" or cont == "y" :
+        		user= True
+        	else:
+        		user= False 
+        		exit()
     elif choice == 3: 
-        user_ropani_decimal=float(input("Input Ropani Decimal: \n"))
-        decmal2sqm=user_ropani_decimal*508.74
-        converter(decmal2sqm)
+    	user= True
+    	while user== True :
+        	user_ropani_decimal=float(input("Input Ropani Decimal: \n"))
+        	decmal2sqm=user_ropani_decimal*508.74
+        	converter(decmal2sqm)
+        	cont= input("Enter Again ? (Y/N)")
+        	if cont =="Y" or cont == "y" :
+        		user= True
+        	else:
+        		user= False 
+        		exit()
     else:
         print("bad value provided")
         exit()
-
-
-
