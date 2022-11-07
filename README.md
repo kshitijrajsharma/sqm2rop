@@ -11,7 +11,9 @@ Choose Options for convert to Ropani/Aana/Paisa/Dam :
  4) Enter Mohada / Pixad ( Eg: 16 haat / 40 haat ) 
  
  
-Download and run Python file using your python 
+Download and run Python file using your python IDE 
+( You can download python ide on andoird / IOS too and run the .py file inside sqm2ropani ) 
+
 https://codeload.github.com/kshitijrajsharma/sqm2rop/zip/refs/heads/master
 
 it's a very old project I started as a tool to convert while learning python , later on moved to github 
