@@ -73,7 +73,7 @@ if __name__ == "__main__":
     # Give the location of the file
     choice = int(
         input(
-            " Convert to Rop/Aana/Paisa/dam \nChoose Options : \n 1) Enter CSV \n 2) Enter SQM \n 3) Ropani Decimal to Aana and SQM \n 4) Enter Mohada / Pixad \n"
+            " Convert to Rop/Aana/Paisa/dam \nChoose Options : \n 1) Enter CSV \n 2) Enter SQM \n 3) Ropani Decimal to Aana and SQM \n 4) Enter Mohada / Pixad \n 5) Enter Mohada(m) /Pixad(m) \n 6) Haat to meter \n" 
         )
     )
 
@@ -158,6 +158,31 @@ if __name__ == "__main__":
                 user = False
                 print("Exiting....")
                 exit()
+    elif choice == 5:
+        user = True
+        while user is True:
+            mohada_m = float(input("Input Mohada (in m): \n"))
+            pixad_m = float(input("Input Pixad (in m): \n"))
+            area_sqm = float(mohada_m * pixad_m)
+            converter(area_sqm)
+            cont = input("Continue ? (Y/N) \n")
+
+            if cont.lower() != "y" or cont.lower() != "yes":
+                user = False
+                print("Exiting....")
+                exit()
+    elif choice == 6:
+        user = True
+        while user is True:
+            haat= float(input("Enter haat : \n"))
+            haat_m = float(haat* 0.4572)
+            print(f"{haat} haat == {haat_m} meter")   
+            cont = input("Continue ? (Y/N) \n")
+            if cont.lower() != "y" or cont.lower() != "yes":
+                user = False
+                print("Exiting....")
+                exit()  
+
 
     else:
         print("Bad value provided")
